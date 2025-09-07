@@ -5,9 +5,53 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <link rel="icon" href="/icon.png">
+    
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.min.css">
   </head>
 
-  <body>
-    <%= yield %>
+  <body class="pico">
+    <header>
+      <div class="container">
+        <nav>
+          <ul>
+            <li>
+              <a href="/square">
+                <strong>Calculators</strong>
+              </a>
+            </li>
+
+            <li>
+              <a href="/square">
+                Square Calculator
+              </a>
+            </li>
+
+            <li>
+              <a href="/root">
+                Square Root Calculator
+              </a>
+            </li>
+
+            <li>
+              <a href="/payment">
+                Payment Calculator
+              </a>
+            </li>
+
+            <li>
+              <a href="/random">
+                Random Number Generator
+              </a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <div class="container">
+        <%= yield %>
+      </div>
+    </main>
   </body>
 </html>
