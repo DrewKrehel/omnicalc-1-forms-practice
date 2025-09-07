@@ -1,21 +1,23 @@
 class CalcController < ApplicationController
   def index
-    render :index
+    render :square
   end
 
-  def calculator_square
+  def square
+    @number = params[:]
 
+    render :square
   end
 
-  def calculator_square_root
+  def square_root
   
   end
 
-  def calculator_payment
+  def payment
 
   end
 
-  def random_numbers
+  def random
   
   end
 
