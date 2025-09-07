@@ -4,9 +4,10 @@ class CalcController < ApplicationController
   end
 
   def square
-    @number = params[:]
+    @number = params[:number].to_f
+    @result = @number * @number
 
-    render :square
+    render :square_results
   end
 
   def square_root
