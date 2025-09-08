@@ -3,7 +3,8 @@ Rails.application.routes.draw do
   # get("/your_first_screen", { :controller => "pages", :action => "first" })
   
   root "calc#index"
-  get "/square", to: "calc#square"
+  get "/square", to: "calc#square_action"
+  get "/root", to: "calc#square_root_action"
   # get("/", { :controller => "calc", :action => "index" })
   
 end

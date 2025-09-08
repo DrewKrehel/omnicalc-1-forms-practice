@@ -4,7 +4,7 @@ class CalcController < ApplicationController
     render :square
   end
 
-  def square
+  def square_action
     @number = params[:number].to_f
     @result = @number * @number
 
@@ -12,6 +12,10 @@ class CalcController < ApplicationController
   end
 
   def square_root
+    render :root
+  end
+  
+  def square_root_action
     @number = params[:number].to_f
     @result = Math.sqrt(@number)
     
