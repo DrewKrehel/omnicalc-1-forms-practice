@@ -4,7 +4,8 @@ Rails.application.routes.draw do
   
   root "calc#index"
   get "/square", to: "calc#square_action"
-  get "/root", to: "calc#square_root_action"
+  get "/root", to: "calc#square_root"
+  get "/root_results", to: "calc#square_root_action"
   # get("/", { :controller => "calc", :action => "index" })
   
 end
