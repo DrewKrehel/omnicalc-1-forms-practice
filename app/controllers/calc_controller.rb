@@ -7,7 +7,7 @@ class CalcController < ApplicationController
     @number = params[:number].to_f
     @result = @number * @number
 
-    render :square_results
+    render :square_result
   end
 
   def square_root

@@ -4,6 +4,6 @@ Rails.application.routes.draw do
   
   # root "calc#index"
   get "/square", to: "calc#square"
-  get("/", { :controller => "calc", :action => "square" })
+  get("/", { :controller => "calc", :action => "index" })
   
 end
