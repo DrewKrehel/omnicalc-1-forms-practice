@@ -11,7 +11,10 @@ class CalcController < ApplicationController
   end
 
   def square_root
-  
+    @number = params[:number].to_f
+    @result = Math.sqrt(@number)
+    
+    render :root_results
   end
 
   def payment
