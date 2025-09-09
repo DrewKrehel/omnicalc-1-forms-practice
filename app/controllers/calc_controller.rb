@@ -1,5 +1,5 @@
 class CalcController < ApplicationController
-  def index
+  def square
     # render ({ :template => "calc/square"})
     render :square
   end
