@@ -41,7 +41,7 @@ class CalcController < ApplicationController
     @denominator = 1 - (1 + @apr) ** -@months
 
     @payment = @numerator / @denominator
-    
+
     render :payment_result
   end
 
