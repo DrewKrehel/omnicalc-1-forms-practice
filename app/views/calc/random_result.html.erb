@@ -5,7 +5,7 @@
     Minimum
   </dt>
   <dd>
-    <%= @min) %>
+    <%= @min %>
   </dd>
 
   <dt>
@@ -19,10 +19,10 @@
     Random Number
   </dt>
   <dd>
-    $<%= @random %>
+    <%= @random.to_fs(:rounded, precision: 5) %>
   </dd>
 </dl>
 
 <a href="/random">
-  Calculate another payment
+  Pick another random number
 </a>
