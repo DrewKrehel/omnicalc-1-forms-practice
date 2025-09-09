@@ -46,7 +46,15 @@ class CalcController < ApplicationController
   end
 
   def random
-  
+    render :random
+  end
+
+  def random_action
+    @min = params[:min].to_f
+    @max = params[:max].to_f
+    @random = rand(@min..@max)
+
+    render :random_result
   end
 
 end

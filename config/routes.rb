@@ -8,6 +8,8 @@ Rails.application.routes.draw do
   get "/root_result", to: "calc#square_root_action"
   get "/payment", to: "calc#payment"
   get "/payment_result", to: "calc#payment_action"
+  get "/random", to: "calc#random"
+  get "/random_result", to: "calc#random_action"
 
   # get("/", { :controller => "calc", :action => "index" })
   
