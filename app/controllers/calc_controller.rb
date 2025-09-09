@@ -19,11 +19,30 @@ class CalcController < ApplicationController
     @number = params[:number].to_f
     @result = Math.sqrt(@number)
     
-    render :root_results
+    render :root_result
   end
 
   def payment
+    render :payment
+  end
 
+  def payment_action
+    @apr_input = params[:apr].to_f
+    @apr = (@apr_input / 100) / 12
+    @years = params[:years].to_f
+    @months = @years * 12
+    @principal = params[:principal].to_f
+    
+    if @apr == 0
+      return @principal / @months
+    end
+
+    @numerator = @apr * @principal
+    @denominator = 1 - (1 + @apr) ** -@months
+
+    @payment = @numerator / @denominator
+    
+    render :payment_result
   end
 
   def random
