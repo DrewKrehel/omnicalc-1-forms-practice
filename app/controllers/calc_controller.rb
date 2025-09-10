@@ -8,18 +8,18 @@ class CalcController < ApplicationController
     @number = params[:number].to_f
     @result = @number * @number
 
-    render :square_result
+    render :square_results
   end
 
   def square_root
-    render :root
+    render :square_root
   end
   
   def square_root_action
     @number = params[:number].to_f
     @result = Math.sqrt(@number)
     
-    render :root_result
+    render :square_root_results
   end
 
   def payment
@@ -42,7 +42,7 @@ class CalcController < ApplicationController
 
     @payment = @numerator / @denominator
 
-    render :payment_result
+    render :payment_results
   end
 
   def random
@@ -54,7 +54,7 @@ class CalcController < ApplicationController
     @max = params[:max].to_f
     @random = rand(@min..@max)
 
-    render :random_result
+    render :random_results
   end
 
 end
